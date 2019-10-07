@@ -1,4 +1,5 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="WebApplicationTest.Default" %>
+
 <%-- Страничная директива или директива Page --%>
 
 <!DOCTYPE html>
@@ -14,7 +15,7 @@
             <h1>Новый год у Татьяны!</h1>
             <p>Мы устроим классную вечеринку и вы приглашены!</p>
         </div>
-         <%-- ValidationSummary генерирует порцию html кода при проверке достоверности --%> 
+        <%-- ValidationSummary генерирует порцию html кода при проверке достоверности --%>
         <asp:ValidationSummary ID="validationSummary" runat="server" ShowModelStateErrors="true" />
         <div>
             <label>Ваше имя:</label><input type="text" id="name" runat="server" />
@@ -36,6 +37,15 @@
         <div>
             <button type="submit">Отправить приглашение RSVP</button>
         </div>
+        <asp:TextBox ID="txtInput" runat="server" />
+        <asp:Button ID="btn" runat="server" Text="Button" OnClientClick="Click();" />
     </form>
+
+    <script type="text/javascript">
+        function Click() {
+            var str = 'Hello, world!'
+            alert(str);
+        }
+    </script>
 </body>
 </html>

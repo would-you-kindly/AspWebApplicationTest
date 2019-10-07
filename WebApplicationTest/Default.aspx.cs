@@ -32,6 +32,13 @@ namespace WebApplicationTest
                     }
                 }
             }
+
+            txtInput.Text = "asdasdas";
+        }
+
+        protected void btn_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
