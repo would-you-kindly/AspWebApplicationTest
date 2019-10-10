@@ -1,0 +1,139 @@
+﻿<!DOCTYPE HTML>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head>
+<body>
+    <h1>Начнем?</h1>
+    <body>
+        <P>
+            <A HREF="http://kdg.HtmlWeb.ru/"
+               TARGET="_top">Моя страница</A>
+        <P><A HREF="http://www.dstu.edu.ru/">Здесь учился</A>
+        <P>
+            <A HREF="http://www.tnk-ug.ru/">Здесь работаю</A>
+            <HR>
+            <H1>Свойства ссылок</H1>
+            <script type="text/javascript">
+                //window.alert();
+                if (confirm("Рад видеть Вас на моем сайте! Пошли дальше ? ")) {
+                    document.write("Пошли!");
+                }
+                else {
+                    document.write("Не хочешь - не надо... ");
+                }
+                var yourName = prompt("Как Вас зовут?", "Маша");
+                if (yourName == "Маша") {
+                    document.write("Угадал!");
+                }
+                else {
+                    document.write("Не угадал. Вас зовут " + yourName);
+                }
+                //var newWindow = window.open("ann.htm", "", "toolbar=no,menubar=no,width=300,height=200")
+                //newWindow.close();
+                function change() {
+                    document.getElementById("B_B").src = "ba.gif";
+                }
+                window.setTimeout("change()", 2000);
+                var id = window.setTimeout("alert()", 5000);
+                //window.clearTimeout(id);
+                window.moveTo(100, 100);
+                // Цикл по всем ссылкам
+                for (i = 0; i < document.links.length; i++) {
+                    // Разделительная линия
+                    document.write("<HR>");
+                    // Текст ссылки, выделенный жирным шрифтом
+                    var Txt = document.links[i] + "<br>";
+                    document.write(Txt.bold());
+                    // Все свойства ссылки
+                    document.write("host: ".italics() + document.links[i].host + "<br>");
+                    document.write("hostname: ".italics() + document.links[i].hostname + "<br>");
+                    document.write("href: ".italics() + document.links[i].href + "<br>");
+                    document.write("pathname: ".italics() + document.links[i].pathname + "<br>");
+                    document.write("port: ".italics() + document.links[i].port + "<br>");
+                    document.write("search: ".italics() + document.links[i].search + "<br>");
+                    document.write("target: ".italics() + document.links[i].target + "<br>");
+                }
+                function addText(id, txt) {
+                    document.getElementById(id).innerHTML += document.getElementById(txt).value + '<br />';
+                }
+
+                function addText2(id, txt) {
+                    var str = document.getElementById(txt).value;
+                    var o = document.getElementById(id);
+                    o.appendChild(document.createTextNode(str));
+                    o.appendChild(document.createElement('br'));
+                }
+
+                function addRow(id) {
+                    var tbody = document.getElementById(id).getElementsByTagName("TBODY")[0];
+                    var row = document.createElement("TR")
+                    var td1 = document.createElement("TD")
+                    td1.appendChild(document.createTextNode("column 1"))
+                    var td2 = document.createElement("TD")
+                    td2.appendChild(document.createTextNode("column 2"))
+                    row.appendChild(td1);
+                    row.appendChild(td2);
+                    tbody.appendChild(row);
+                }
+
+                // Старая схема перехвата события
+                window.onload = function () {
+                    // Отыскать элемент <form>
+                    var elt = document.getElementById("shipping_address");
+
+                    // Зарегистрировать обработчик события, который будет вызываться
+                    // непосредственно перед отправкой формы
+                    elt.onsubmit = function () { return validate(this); }
+                }
+
+                // Новая схема перехвата и обработки событий
+                var b = document.getElementById("mybutton");
+                b.onclick = function () {
+                    alert("Спасибо, что щелкнули на мне!");
+                };
+
+                b.addEventListener("click", function () { alert('Еще раз спасибо!') }, false);
+
+                // Создать многомерный массив
+                var table = new Array(10);		// В таблице 10 строк
+
+                for (var i = 0; i < table.length; i++)
+                    table[i] = new Array(10);		// В каждой строке 10 столбцов
+
+                // Инициализировать массив и вывести на консоль
+                for (var row = 0, str = ''; row < table.length; row++) {
+                    for (var col = 0; col < table[row].length; col++) {
+                        table[row][col] = (row + 1) * (col + 1);
+                        str += table[row][col] + '  ';
+                    }
+                    console.log(str + '\n');
+                    str = '';
+                }
+
+            </script>
+            <button id="mybutton">Щелкните меня!</button>
+            <h1>Добавление строки в таблице с помощью DOM javascript</h1>
+            <center>
+        <p>Скрипт добавляет строку в таблицу, после нажатия на ссылку.</p>
+
+        <a href="javascript://" onclick="addRow('myTable');return false;">Добавить строку</a>
+        <table id="myTable" cellspacing="0" border="1">
+            <tbody>
+                <tr>
+                    <td>row1_column1</td>
+                    <td>row1_column1</td>
+                </tr>
+            </tbody>
+        </table>
+        <div id="str"></div>
+        <form>
+            <input id="text" type="text" value="" placeholder="Введите текст" />
+            <input type="button" onclick="addText('str','text')" value="Нажми меня" />
+        </form>
+        <div id="str2"></div>
+        <form>
+            <input id="text2" type="text" value="" placeholder="Введите текст" />
+            <input type="button" onclick="addText2('str2','text2')" value="Нажми меня" />
+        </form>
+    </body>
+    </html>

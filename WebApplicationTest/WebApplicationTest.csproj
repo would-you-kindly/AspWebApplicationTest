@@ -67,11 +67,15 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="ClockJS.html" />
     <Content Include="Default.aspx" />
+    <Content Include="jQueryJS.html" />
     <Content Include="SeeYouThere.html" />
     <Content Include="SorryYouCantCome.html" />
     <Content Include="Styles.css" />
+    <Content Include="styles1.css" />
     <Content Include="Summary.aspx" />
+    <Content Include="testJS.html" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>

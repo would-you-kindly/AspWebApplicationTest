@@ -1,0 +1,100 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Библиотека jQuery</title>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="styles1.css" />
+    <script>
+        //// Обработчик события загрузки страницы
+        //window.onload = function () {
+        //    // Найти все нечетные элементы img в документе,
+        //    // добавить обработчики событий наведения курсора мыши
+        //    // и добавить отладочную информацию на консоль
+        //    var oddImages = document.getElementsByTagName('img');
+        //    for (var i = 0; i < oddImages.length; i++) {
+        //        if (i % 2 != 0) {
+        //            // Для современных браузеров
+        //            if (document.addEventListener) {
+        //                oddImages[i].addEventListener('mouseover', mouseOverHandler, false);
+        //                oddImages[i].addEventListener('mouseout', mouseOutHandler, false);
+        //            }
+        //        }
+        //    }
+
+        //    // Обработчики событий
+        //    function mouseOverHandler(e) {
+        //        e = e || window.event;
+        //        var target = e.target || e.srcElement;
+        //        target.style.cssText = "opacity:0.5";
+        //        console.log('Вы навели мышь на элемент <img src="' + target.src + '">');
+        //    }
+
+        //    function mouseOutHandler(e) {
+        //        e = e || window.event;
+        //        var target = e.target || e.srcElement;
+        //        target.style.cssText = "opacity:1";
+        //        console.log('Вы убрали мышь с элемента <img src="' + target.src + '">');
+        //    }
+        //};
+
+        $(document).ready(function (e) {
+            alert('Привет')
+        });
+
+        $(document).ready(function (e) {
+            $("img:odd").mouseenter(function (e) {
+                $(this).css("opacity", 0.5);
+                console.log('Вы навели мышь на элемент <img src="' + $(this).attr('src') + '">');
+            }).mouseout(function (e) {
+                $(this).css("opacity", 1.0);
+                console.log('Вы убрали мышь с элемента <img src="' + $(this).attr('src') + '">');
+            });
+        });
+    </script>
+</head>
+<body>
+    <h1>Цветочный магазин</h1>
+    <form method="post">
+        <div id="oblock">
+            <div class="dtable">
+                <div id="row1" class="drow">
+                    <div class="dcell">
+                        <img src="http://professorweb.ru/downloads/jquery/astor.png" />
+                        <label for="astor">Астра:</label>
+                        <input name="astor" value="0" required>
+                    </div>
+                    <div class="dcell">
+                        <img src="http://professorweb.ru/downloads/jquery/daffodil.png" />
+                        <label for="daffodil">Нарцисс:</label>
+                        <input name="daffodil" value="0" required>
+                    </div>
+                    <div class="dcell">
+                        <img src="http://professorweb.ru/downloads/jquery/rose.png" />
+                        <label for="rose">Роза:</label>
+                        <input name="rose" value="0" required>
+                    </div>
+                </div>
+                <div id="row2" class="drow">
+                    <div class="dcell">
+                        <img src="http://professorweb.ru/downloads/jquery/peony.png" />
+                        <label for="peony">Пион:</label>
+                        <input name="peony" value="0" required>
+                    </div>
+                    <div class="dcell">
+                        <img src="http://professorweb.ru/downloads/jquery/primula.png" />
+                        <label for="primula">Примула:</label>
+                        <input name="primula" value="0" required>
+                    </div>
+                    <div class="dcell">
+                        <img src="http://professorweb.ru/downloads/jquery/snowdrop.png" />
+                        <label for="snowdrop">Подснежник:</label>
+                        <input name="snowdrop" value="0" required>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="buttonDiv"><button type="submit">Заказать</button></div>
+    </form>
+</body>
+</html>
