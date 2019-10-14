@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="d63f0744-2126-4934-8563-159f9e342591" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="https://localhost:44306/TestService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="TestService.xsd" MetadataType="Schema" ID="4dc586ad-971f-4e68-bd14-af9e9a7e58fc" SourceId="1" SourceUrl="https://localhost:44306/TestService.svc?xsd=xsd0" />
+    <MetadataFile FileName="TestService1.xsd" MetadataType="Schema" ID="827de248-52d2-44c8-9ca1-c724d92a5990" SourceId="1" SourceUrl="https://localhost:44306/TestService.svc?xsd=xsd1" />
+    <MetadataFile FileName="TestService.wsdl" MetadataType="Wsdl" ID="af36061c-c745-4740-a74f-f832aba68054" SourceId="1" SourceUrl="https://localhost:44306/TestService.svc?wsdl" />
+    <MetadataFile FileName="TestService1.wsdl" MetadataType="Wsdl" ID="810c8a32-43b4-4149-981a-473af503f85b" SourceId="1" SourceUrl="https://localhost:44306/TestService.svc?wsdl=wsdl0" />
+    <MetadataFile FileName="TestService.disco" MetadataType="Disco" ID="fafbb4e6-78ee-4373-a1f1-1524243efd3d" SourceId="1" SourceUrl="https://localhost:44306/TestService.svc?disco" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>
