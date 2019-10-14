@@ -12,6 +12,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebServiceClient", "WebServ
 		{D81A974F-8B61-43B2-8250-FE006D08A7E8} = {D81A974F-8B61-43B2-8250-FE006D08A7E8}
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MiscrosoftSampleClient", "MiscrosoftSampleClient\MiscrosoftSampleClient.csproj", "{E2CA670C-A357-4891-A74F-251DA8BECDF8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -30,6 +32,10 @@ Global
 		{1B78EE39-B807-43E6-8354-CA71591D7B8E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1B78EE39-B807-43E6-8354-CA71591D7B8E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1B78EE39-B807-43E6-8354-CA71591D7B8E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E2CA670C-A357-4891-A74F-251DA8BECDF8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E2CA670C-A357-4891-A74F-251DA8BECDF8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E2CA670C-A357-4891-A74F-251DA8BECDF8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E2CA670C-A357-4891-A74F-251DA8BECDF8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
