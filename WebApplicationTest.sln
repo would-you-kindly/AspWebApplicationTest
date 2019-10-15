@@ -14,6 +14,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebServiceClient", "WebServ
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MiscrosoftSampleClient", "MiscrosoftSampleClient\MiscrosoftSampleClient.csproj", "{E2CA670C-A357-4891-A74F-251DA8BECDF8}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WcfAsWindowsService", "WcfAsWindowsService\WcfAsWindowsService.csproj", "{BD263CAC-9FB3-482D-9DD8-E1498ABAF0BE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WcfCalculatorClient", "WcfCalculatorClient\WcfCalculatorClient.csproj", "{98C0BA88-F3CA-4BF1-B456-47323A8D1A9C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -36,6 +40,14 @@ Global
 		{E2CA670C-A357-4891-A74F-251DA8BECDF8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E2CA670C-A357-4891-A74F-251DA8BECDF8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E2CA670C-A357-4891-A74F-251DA8BECDF8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BD263CAC-9FB3-482D-9DD8-E1498ABAF0BE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BD263CAC-9FB3-482D-9DD8-E1498ABAF0BE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BD263CAC-9FB3-482D-9DD8-E1498ABAF0BE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BD263CAC-9FB3-482D-9DD8-E1498ABAF0BE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{98C0BA88-F3CA-4BF1-B456-47323A8D1A9C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{98C0BA88-F3CA-4BF1-B456-47323A8D1A9C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{98C0BA88-F3CA-4BF1-B456-47323A8D1A9C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{98C0BA88-F3CA-4BF1-B456-47323A8D1A9C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
