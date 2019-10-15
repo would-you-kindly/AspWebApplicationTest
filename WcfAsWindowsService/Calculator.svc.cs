@@ -9,9 +9,9 @@ namespace WcfAsWindowsService
 {
     public class Calculator : ICalculator
     {
-        public double Add(double n1, double n2)
+        public string Add(string n1, string n2)
         {
-            double result = n1 + n2;
+            string result = n1 + n2;
             return result;
         }
 

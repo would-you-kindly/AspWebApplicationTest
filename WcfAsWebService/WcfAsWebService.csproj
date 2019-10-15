@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{BD263CAC-9FB3-482D-9DD8-E1498ABAF0BE}</ProjectGuid>
+    <ProjectGuid>{4F36DC62-BB2B-4D28-986C-FAC555222D4D}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>WcfAsWindowsService</RootNamespace>
-    <AssemblyName>WcfAsWindowsService</AssemblyName>
+    <RootNamespace>WcfAsWebService</RootNamespace>
+    <AssemblyName>WcfAsWebService</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -34,11 +34,9 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
-    <Reference Include="System.Configuration.Install" />
     <Reference Include="System.Core" />
     <Reference Include="System.ServiceModel" />
     <Reference Include="System.ServiceModel.Web" />
-    <Reference Include="System.ServiceProcess" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -47,23 +45,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Calculator.svc.cs">
-      <DependentUpon>Calculator.svc</DependentUpon>
-    </Compile>
-    <Compile Include="CalculatorWindowsService.cs">
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="ICalculator.cs" />
-    <Compile Include="ProjectInstaller.cs">
-      <SubType>Component</SubType>
-    </Compile>
+    <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Calculator.svc" />
+    <ProjectReference Include="..\WcfAsWindowsService\WcfAsWindowsService.csproj">
+      <Project>{bd263cac-9fb3-482d-9dd8-e1498abaf0be}</Project>
+      <Name>WcfAsWindowsService</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
